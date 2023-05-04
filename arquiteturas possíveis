@@ -1,0 +1,11 @@
+# Resumo sobre a Arquitetura em Camadas
+
+A arquitetura em camadas é um padrão de arquitetura de software que divide um sistema em camadas distintas, cada uma com uma responsabilidade específica e bem definida. 
+
+Cada camada se comunica apenas com as camadas adjacentes por meio de interfaces bem definidas. 
+
+- A camada de apresentação lida com a interface do usuário e interação com o usuário.
+- A camada de lógica de negócios lida com a lógica de negócios do sistema. 
+- A camada de acesso a dados lida com o acesso aos dados do sistema. 
+
+A arquitetura em camadas ajuda a tornar o sistema escalável, modular e fácil de manter e atualizar.
