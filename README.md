@@ -4,6 +4,14 @@
 
 ### Seu desenvolvimento consiste em um pluguin que ira coletar dados referentes a turma, como notas das avaliações do aluno, número de atividades feitas pelo aluno e a quantidade de aulas assistidas, e salválos dentro de uma planilha.Desse modo, os professores poderão saber de forma rápida como está o desenvolvimento de cada aluno em sua turma.
 
+## 🔨 Tecnologias
+![image](https://github.com/fga-eps-mds/2023.1-Moody/assets/116928666/50a29fb1-9995-4a18-9843-ace04c3bec25)
+![image](https://github.com/fga-eps-mds/2023.1-Moody/assets/116928666/ab113025-43e8-4a26-b58e-4a90716e2415)
+![image](https://github.com/fga-eps-mds/2023.1-Moody/assets/116928666/8ca1a16e-5b00-4240-a317-da02d10f00d9)
+![image](https://github.com/fga-eps-mds/2023.1-Moody/assets/116928666/b7c37dfa-d841-440b-b2a1-3de9bc8449da)
+![image](https://github.com/fga-eps-mds/2023.1-Moody/assets/116928666/64e6204b-e321-4983-b3bf-f40c95f2066c)
+![image](https://github.com/fga-eps-mds/2023.1-Moody/assets/116928666/29684855-1c48-401c-93ef-ef271257fc9a)
+
 
 ## 🤝 Colaboradores
 
