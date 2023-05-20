@@ -12,6 +12,47 @@
 ![image](https://github.com/fga-eps-mds/2023.1-Moody/assets/116928666/64e6204b-e321-4983-b3bf-f40c95f2066c)
 ![image](https://github.com/fga-eps-mds/2023.1-Moody/assets/116928666/29684855-1c48-401c-93ef-ef271257fc9a)
 
+## Arquitetura
+
+1. Model-View Controller - MVC
+2. Interface (Interação do usuário)
+3. Controle (após interação)
+4. Modelo (monitorando o percentual e jogando na planilha)
+
+
+## Recursos Principais
+1. Visualização de conteúdo;
+2. Contador de tempo de tempo de acesso de cada aluno;
+3. Acompanhamento das notas das avaliações dos alunos;
+4. Apresentação das tabelas com todas as informações dos alunos presentes na turma.
+ 
+ Para mais mais informações, visite o link abaixo com o story mapping do projeto.
+ 
+ [Moody stroy map](https://miro.com/app/embed/uXjVMNtnk8I=/?pres=1&frameId=3458764553071848287&embedId=860220317588)
+ 
+
+## Como instalar a plataforma Moodle localmente
+
+### download e implementação para windows
+1. acesse o [link](https://download.moodle.org/windows/)
+2. baixe a versão mais atualizada
+3. descompacte o arquivo
+4. execute start moodle.exe
+5. Em seu navegador digite na url `localhost`
+6. siga o processo de instalação
+
+### plugin
+A pasta se encontra no caminho 
+> server/moodle/local
+
+Para instalar o plugin do repositorio basta baixar e aplicar o arquivo na pasta local
+
+É recomendado limpar o cache utilizando o link abaixo para as atualizações serem aplicadas
+> http://localhost/admin/purgecaches.php
+
+## BackLog do produto
+
+
 
 ## 🤝 Colaboradores
 
