@@ -7,7 +7,7 @@ function local_plugin_exibir_url() {
     // Obtém a URL atual
     $url = $PAGE->url;
 
-    // Exibe a URL
+   //Converte para string
     $url_string = strval($url);
 
     // Exibe a URL
@@ -17,24 +17,24 @@ function local_plugin_exibir_url() {
 
     $context = context_user::instance($USER->id);
 
-// Verifica se o usuário possui a função de administrador
+// Verifica o tipo de usuário
 if (has_capability('moodle/site:config', $context)) {
     echo "Usuário é um administrador";
 } 
-// Verifica se o usuário possui a função de professor
+
 elseif (has_capability('moodle/course:update', $context)) {
     echo "Usuário é um professor";
 } 
-// Verifica se o usuário possui a função de estudante
+
 elseif (has_capability('moodle/course:view', $context)) {
     echo "Usuário é um estudante";
 } 
-// Caso contrário, assume que o usuário possui uma função padrão
+
 else {
     echo "Usuário possui uma função padrão";
 }
 
-    // Verifica se o caminho da URL corresponde ao valor desejado
+   
     if ($path === '/course/view.php') {
         echo 'A URL atual corresponde a http://localhost/course/view.php';
     } else {
@@ -50,24 +50,7 @@ function local_plugin_before_footer() {
     local_plugin_exibir_url();
 }
 
-//function meu_plugin_curso_acessado(\core\event\course_viewed $event) {
-//    \core\notification::add('testando', \core\output\notification::NOTIFY_SUCCESS);
-//}
-//
-//// Registra o observador de evento 'course_viewed'
-//$observers = array(
-//    array(
-//        'eventname' => '\core\event\course_viewed',
-//        'callback' => 'meu_plugin_curso_acessado',
-//    ),
-//);
 
-
-// Função para obter e exibir a URL atual
-
-
-
-// Chama a função para exibir a URL
 
 
 
