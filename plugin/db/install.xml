@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<XMLDB PATH="local/plugin/db" VERSION="20130407" COMMENT="XMLDB file for local message plugin"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="../../../lib/xmldb/xmldb.xsd"
+>
+    <TABLES>
+        <TABLE NAME="local_plugin" COMMENT="each record is a user record of reading a message">
+            <FIELDS>
+                <FIELD NAME="username" TYPE="text" NOTNULL="true" LENGTH="255" SEQUENCE="false"/>
+                <FIELD NAME="counter" TYPE="int" LENGTH="10" NOTNULL="true" DEFAULT="0" SEQUENCE="false"/>
+            </FIELDS>
+            <KEYS>
+                <KEY NAME="primary" TYPE="primary" FIELDS="username(100)"/>
+            </KEYS>
+        </TABLE>
+    </TABLES>
+</XMLDB>
+
