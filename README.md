@@ -12,7 +12,7 @@
 ![image](https://github.com/fga-eps-mds/2023.1-Moody/assets/116928666/64e6204b-e321-4983-b3bf-f40c95f2066c)
 ![image](https://github.com/fga-eps-mds/2023.1-Moody/assets/116928666/29684855-1c48-401c-93ef-ef271257fc9a)
 
-## Arquitetura
+## 📐 Arquitetura
 
 1. Model-View Controller - MVC
 2. Interface (Interação do usuário)
@@ -20,7 +20,7 @@
 4. Modelo (monitorando o percentual e jogando na planilha)
 
 
-## Recursos Principais
+## 💻 Recursos Principais
 1. Visualização de conteúdo;
 2. Contador de tempo de tempo de acesso de cada aluno;
 3. Acompanhamento das notas das avaliações dos alunos;
@@ -31,9 +31,9 @@
  [Moody stroy map](https://miro.com/app/embed/uXjVMNtnk8I=/?pres=1&frameId=3458764553071848287&embedId=860220317588)
  
 
-## Como instalar a plataforma Moodle localmente
+## 💿 Como instalar a plataforma Moodle localmente
 
-### download e implementação para windows
+### Download e implementação para windows
 1. acesse o [link](https://download.moodle.org/windows/)
 2. baixe a versão mais atualizada
 3. descompacte o arquivo
@@ -41,7 +41,7 @@
 5. Em seu navegador digite na url `localhost`
 6. siga o processo de instalação
 
-### plugin
+### Plugin
 A pasta se encontra no caminho 
 > server/moodle/local
 
@@ -50,15 +50,17 @@ Para instalar o plugin do repositorio basta baixar e aplicar o arquivo na pasta 
 É recomendado limpar o cache utilizando o link abaixo para as atualizações serem aplicadas
 > http://localhost/admin/purgecaches.php
 
-## BackLog do produto
+## 📘 BackLog do produto
+Acesse o BackLog do produto: [BackLog](https://miro.com/app/embed/uXjVMNtnk8I=/?pres=1&frameId=3458764553071848287&embedId=860220317588)
 
-
+## 🫶 Comunidade
+Para desenvolvimento do Moody levando em conta a complexidade do projeto e sua estrutura, foi utilizado o Whatsapp para uma comunicação mais rápida e para agendar as reuniões, tais como as semanais ou mesmo aquelas que seriam agendadas para a solução de alguma questão levantada. Foi utilizado o Discord para as reuniões semanais onde o grupo se reuniria para discutir o andamento do projeto e levantamento de questões. Para organização do código e alinhamento das funcionalidades, foram utilizadas as poroprias Issues.
 
 ## 🤝 Colaboradores
 
 | [<img src="https://github.com/IanLucca12.png" width=80><br><sub>Ian Lucca Soares Mesquita</sub>](https://github.com/IanLucca12) |  [<img src="https://github.com/rhumenigue.png" width=80><br><sub>Rhumenigue Barbosa</sub>](https://github.com/rhumenigue) |  [<img src="https://github.com/crstyhs.png" width=80><br><sub>Christian Hirsch Santos</sub>](https://github.com/crstyhs) |[<img src="https://github.com/gmeister18.png" width=80><br><sub>Guilherme Meister Correa </sub>](https://github.com/gmeister18) |  [<img src="https://github.com/TheCarlosRamos.png" width=80><br><sub>Carlos Gabriel Cardoso Ramos</sub>](https://github.com/TheCarlosRamos) |  [<img src="https://github.com/rodrigogontijoo.png" width=80><br><sub>Rodrigo Braz Ferreira Gontijo</sub>](https://github.com/rodrigogontijoo) | [<img src="https://github.com/RochaCarla.png" width=80><br><sub>Professora Carla Rocha</sub>](https://github.com/RochaCarla)|
 | :---: | :---: | :---: |  :---: | :---: | :---: |  :---: |
 
-## 🔎Licença 👀
+## 🔎 Licença 👀
 
 Este projeto está sob [Licença](https://github.com/fga-eps-mds/2023.1-Moody/blob/main/LICENSE). Clique para mais informações.
