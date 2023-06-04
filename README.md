@@ -10,7 +10,8 @@
 ![image](https://github.com/fga-eps-mds/2023.1-Moody/assets/116928666/8ca1a16e-5b00-4240-a317-da02d10f00d9)
 ![image](https://github.com/fga-eps-mds/2023.1-Moody/assets/116928666/b7c37dfa-d841-440b-b2a1-3de9bc8449da)
 ![image](https://github.com/fga-eps-mds/2023.1-Moody/assets/116928666/64e6204b-e321-4983-b3bf-f40c95f2066c)
-![image](https://github.com/fga-eps-mds/2023.1-Moody/assets/116928666/29684855-1c48-401c-93ef-ef271257fc9a)
+![image](https://github.com/fga-eps-mds/2023.1-Moody/assets/116928666/0ee144ef-ca58-4379-981e-99c51aca8600)
+
 
 ## 📐 Arquitetura
 
