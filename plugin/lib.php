@@ -1,5 +1,6 @@
 <?php
 defined('MOODLE_INTERNAL') || die();
+
 function display_counter($username) {
     global $DB;
 
@@ -75,6 +76,12 @@ function local_plugin_exibir_url() {
 
     // Verifica se o caminho da URL corresponde ao valor desejado
     if ($path === '/course/view.php') {
+        $_SESSION['tempoEntrada'] = time();
+        //$tempoEntrada = date('H:i', $tempoEntrada);
+        echo $_SESSION['tempoEntrada'] ; 
+        $_SESSION['foiAcessado'] = 1;
+        echo "o tempo medio é " .  $_SESSION['foiAcessado'] ; 
+
         //echo 'A URL atual corresponde a http://localhost/course/view.php'; //caso queira verificar as mudanças
         $context = context_system::instance();
 
@@ -90,6 +97,16 @@ function local_plugin_exibir_url() {
         display_counter($username); //caso queira verificar a atualização
 
     } else {
+        //echo "o tempo medio é " . $_SESSION['foiAcessado'] ;
+        if($_SESSION['foiAcessado'] == 1){
+            $_SESSION['foiAcessado'] = 0; 
+            $tempoSaida = time();
+           //$tempo = $tempoSaida  - $tempoEntrada ; 
+           $tempo = round(($tempoSaida - $_SESSION['tempoEntrada']) / 60);
+           //$tempo_formatado = date('H:i', $tempo);
+           //echo "o tempo medio é " . $tempo_formatado;
+           echo "o tempo medio é " . $tempo;
+        }
         //echo 'A URL atual não corresponde a http://localhost/course/view.php'; //caso queira verificar as mudanças
     }
 
