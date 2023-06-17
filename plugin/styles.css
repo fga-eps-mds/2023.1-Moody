@@ -20,3 +20,81 @@
 .texto{
   margin-top: 30px;
 }
+
+.ret_sobre{
+  /* retângulo_sobre */
+position: absolute;
+width: 308px;
+height: 55px;
+background: #2930DF;
+border-radius: 10px;
+}
+
+.ret_moody{
+/* retangulo_moody */
+position: absolute;
+width: 170px;
+height: 34px;
+background: #2930DF;
+border-radius: 10px;
+}
+
+.moody{
+/* Moody */
+position: absolute;
+width: 40px;
+height: 30px;
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 15px;
+text-align: center;
+color: #FAF0F0;
+}
+
+.ret_estat{
+/* Retângulo_estatistica */
+position: absolute;
+width: 107p;
+height: 30px;
+background: #FFFCFC;
+border-radius: 10px;
+}
+
+.ret_sobre2{
+/* Retângulo_sobre */
+position: absolute;
+width: 107px;
+height: 30px;
+background: #FFFCFC;
+border-radius: 10px;
+}
+
+.estatistica{
+/* Estatística */
+position: absolute;
+width: 90px;
+height: 16px;
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 15px;
+text-align: center;
+color: #000000;
+}
+
+.sobre{
+/* Sobre */
+position: absolute;
+width: 89px;
+height: 16px;
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 15px;
+text-align: center;
+color: #000000;
+}
