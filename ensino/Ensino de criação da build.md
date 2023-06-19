@@ -1,4 +1,4 @@
-Passos para acriação da Build do moodle:
+Passos para acriação da Build do Moody:
 
 
 1- Certifique-se de ter um ambiente de produção configurado e funcionando corretamente com o Moodle instalado.
