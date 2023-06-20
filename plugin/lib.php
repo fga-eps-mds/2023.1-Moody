@@ -41,7 +41,7 @@ function update_tempo($username, $tempo) {
         $contador = $salvo->counter;
         $tempo_medio = $tempo_acumulado / $contador;
         $DB->execute("UPDATE {local_plugin} SET tempo = ?, counter = ? WHERE username = ?", array($tempo_medio, $contador, $username));
-        echo "O tempo médio é realmente: " . $tempo_medio;
+        echo "o tempo medio é realmente e" . $tempo_medio;
     } else {
         
         $DB->execute("INSERT INTO {local_plugin} (username, tempo, counter) VALUES (?, ?, ?)", array($username, $tempo, 1));
@@ -49,12 +49,54 @@ function update_tempo($username, $tempo) {
 }
 
 
+function contarAtividadesConcluidas($userid, $courseid) {
+    global $DB , $USER;
+
+    // Consulta SQL para buscar as atividades concluídas do usuário no curso
+    $sql = "SELECT COUNT(*) AS count
+            FROM {course_modules_completion} cmc
+            INNER JOIN {course_modules} cm ON cm.id = cmc.coursemoduleid
+            INNER JOIN {modules} m ON m.id = cm.module
+            WHERE cmc.userid = :userid
+            AND cm.course = :courseid
+            AND cmc.completionstate = 1";
+
+    // Parâmetros da consulta
+    $params = [
+        'userid' => $userid,
+        'courseid' => $courseid
+    ];
+
+  // Atividades marcadas como concluidas
+    $resultados = $DB->get_record_sql($sql, $params);
+
+
+    echo "quantidade concluida" .  $resultados->count;
+
+        $user = $USER;
+        $username = fullname($user);
+        $username = normalize_username($username);
+       
+        $salvo = $DB->get_record('local_plugin', array('username' => $username));
+        if($salvo){
+            $DB->execute("UPDATE {local_plugin} SET concluidos = ? WHERE username = ?", array($resultados->count, $username));
+            
+       }
+        else{echo "Usuario não encontrado" ;}
+       
+    $contadorAtividade = 0;
+
+    // Obter o número de atividades do curso
+    $contadorAtividade = $DB->count_records('course_modules', array('course' => $courseid));
+    echo "quantidade total de atividades é " .  $contadorAtividade;
+}
 
 function normalize_username($username) {
     // Remove espaços em branco e converte para letras minúsculas
     $simplesUsername = strtolower(str_replace(' ', '', $username));
     return $simplesUsername;
 }
+
 
 
 function local_plugin_exibir_url() {
@@ -93,10 +135,10 @@ function local_plugin_exibir_url() {
     // Verifica se o caminho da URL corresponde ao valor desejado
     if ($path === '/course/view.php') {
         $_SESSION['tempoEntrada'] = time();
-        //$tempoEntrada = date('H:i', $tempoEntrada);
+       
         echo $_SESSION['tempoEntrada'] ; 
         $_SESSION['foiAcessado'] = 1;
-        echo "O tempo medio é: " .  $_SESSION['foiAcessado'] ; 
+       
 
         //echo 'A URL atual corresponde a http://localhost/course/view.php'; //caso queira verificar as mudanças
         $context = context_system::instance();
@@ -107,22 +149,35 @@ function local_plugin_exibir_url() {
     // Obter o nome completo do usuário
         $username = fullname($user);
         $username = normalize_username($username);
+        $_SESSION['username'] = $username ;
        
         
         update_counter($username);
         display_counter($username); //caso queira verificar a atualização
+      
+        $_SESSION['courseid'] = $_GET['id'];
+      
 
     } else {
-        //echo "o tempo medio é " . $_SESSION['foiAcessado'] ;
+      
         if($_SESSION['foiAcessado'] == 1){
             $_SESSION['foiAcessado'] = 0; 
             $tempoSaida = time();
-           //$tempo = $tempoSaida  - $tempoEntrada ; 
+          
            $tempo = round(($tempoSaida - $_SESSION['tempoEntrada']) / 60);
-           //$tempo_formatado = date('H:i', $tempo);
-           //echo "o tempo medio é " . $tempo_formatado;
-           echo "O tempo medio é: " . $tempo;
-           //update_tempo($username , $tempo);
+           
+           echo "o tempo medio é " . $tempo;
+            $user = $USER;
+    
+            $username = fullname($user);
+            $username = normalize_username($username);
+           update_tempo($username , $tempo);
+           $userid = $user->id;
+           $courseid = $_SESSION['courseid'] ;
+         
+           contarAtividadesConcluidas($userid, $courseid);
+            
+           
            
         }
         //echo 'A URL atual não corresponde a http://localhost/course/view.php'; //caso queira verificar as mudanças
@@ -131,8 +186,14 @@ function local_plugin_exibir_url() {
 }
 //botão de redirecionamento para o moody
 function local_plugin_before_footer() {
+    global $PAGE;
+    
+     if ($PAGE->pagetype == 'site-index'){
     $url = new moodle_url('/local/plugin/pag.php');
     $link = html_writer::link($url, 'Ir para outra página');
-    echo $link;
+    echo $link;}
     local_plugin_exibir_url();
 }
+
+
+
