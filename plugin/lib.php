@@ -50,7 +50,7 @@ function update_tempo($username, $tempo) {
 
 
 function contarAtividadesConcluidas($userid, $courseid) {
-    global $DB;
+    global $DB , $USER;
 
     // Consulta SQL para buscar as atividades concluídas do usuário no curso
     $sql = "SELECT COUNT(*) AS count
@@ -72,6 +72,18 @@ function contarAtividadesConcluidas($userid, $courseid) {
 
 
     echo "quantidade concluida" .  $resultados->count;
+
+        $user = $USER;
+        $username = fullname($user);
+        $username = normalize_username($username);
+       
+        $salvo = $DB->get_record('local_plugin', array('username' => $username));
+        if($salvo){
+            $DB->execute("UPDATE {local_plugin} SET concluidos = ? WHERE username = ?", array($resultados->count, $username));
+            
+       }
+        else{echo "Usuario não encontrado" ;}
+       
     $contadorAtividade = 0;
 
     // Obter o número de atividades do curso
@@ -126,7 +138,7 @@ function local_plugin_exibir_url() {
        
         echo $_SESSION['tempoEntrada'] ; 
         $_SESSION['foiAcessado'] = 1;
-        echo "o tempo medio é " .  $_SESSION['foiAcessado'] ; 
+       
 
         //echo 'A URL atual corresponde a http://localhost/course/view.php'; //caso queira verificar as mudanças
         $context = context_system::instance();
@@ -137,25 +149,21 @@ function local_plugin_exibir_url() {
     // Obter o nome completo do usuário
         $username = fullname($user);
         $username = normalize_username($username);
+        $_SESSION['username'] = $username ;
        
         
         update_counter($username);
         display_counter($username); //caso queira verificar a atualização
-        $userid = $user->id;
-        $courseid = $_GET['id'];
-       
-        contarAtividadesConcluidas( $userid , $courseid);
-
-
-
-        
+      
+        $_SESSION['courseid'] = $_GET['id'];
+      
 
     } else {
-        //echo "o tempo medio é " . $_SESSION['foiAcessado'] ;
+      
         if($_SESSION['foiAcessado'] == 1){
             $_SESSION['foiAcessado'] = 0; 
             $tempoSaida = time();
-           //$tempo = $tempoSaida  - $tempoEntrada ; 
+          
            $tempo = round(($tempoSaida - $_SESSION['tempoEntrada']) / 60);
            
            echo "o tempo medio é " . $tempo;
@@ -164,6 +172,10 @@ function local_plugin_exibir_url() {
             $username = fullname($user);
             $username = normalize_username($username);
            update_tempo($username , $tempo);
+           $userid = $user->id;
+           $courseid = $_SESSION['courseid'] ;
+         
+           contarAtividadesConcluidas($userid, $courseid);
             
            
            
