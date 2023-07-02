@@ -24,8 +24,8 @@ function update_counter($username) {
 
     if ($salvo) {
         // Adiciona 1 ao contador
-        $counter = $salvo->counter + 1;
-        $DB->execute("UPDATE {local_plugin} SET counter = ? WHERE username = ?", array($counter, $username));
+        $contador = $salvo->counter + 1;
+        $DB->execute("UPDATE {local_plugin} SET counter = ? WHERE username = ?", array($contador, $username));
     } else {
         // Se não existe , cria e adiciona 1
         $DB->execute("INSERT INTO {local_plugin} (username, counter) VALUES (?, ?)", array($username, 1));
@@ -75,7 +75,7 @@ function contarAtividadesConcluidas($userid, $courseid) {
 
         $user = $USER;
         $username = fullname($user);
-        $username = normalize_username($username);
+        $username = normal_username($username);
        
         $salvo = $DB->get_record('local_plugin', array('username' => $username));
         if($salvo){
@@ -91,7 +91,7 @@ function contarAtividadesConcluidas($userid, $courseid) {
     echo "quantidade total de atividades é " .  $contadorAtividade;
 }
 
-function normalize_username($username) {
+function normal_username($username) {
     // Remove espaços em branco e converte para letras minúsculas
     $simplesUsername = strtolower(str_replace(' ', '', $username));
     return $simplesUsername;
@@ -99,7 +99,8 @@ function normalize_username($username) {
 
 
 
-function local_plugin_exibir_url() {
+
+function local_plugin() {
     global $PAGE, $USER;
 
     // Obtém a URL atual
@@ -115,25 +116,10 @@ function local_plugin_exibir_url() {
 
     $context = context_user::instance($USER->id);
 
-// Verifica a função do usuario
-//if (has_capability('moodle/site:config', $context)) {
-//    echo "Usuário é um administrador";
-//} 
-//
-//elseif (has_capability('moodle/course:update', $context)) {
-//    echo "Usuário é um professor";
-//} 
-//
-//elseif (has_capability('moodle/course:view', $context)) {
-//    echo "Usuário é um estudante";
-//} 
-//
-//else {
-//    echo "Usuário possui uma função padrão";
-//}//caso queira verificar as mudanças
 
-    // Verifica se o caminho da URL corresponde ao valor desejado
-    if ($path === '/course/view.php') {
+
+    // Verifica se o caminho da URL corresponde ao valor desejado e se o usuario é um aluno
+    if ($path === '/course/view.php' && ! has_capability('moodle/course:update', $context)) {
         $_SESSION['tempoEntrada'] = time();
        
         echo $_SESSION['tempoEntrada'] ; 
@@ -148,7 +134,7 @@ function local_plugin_exibir_url() {
        
     // Obter o nome completo do usuário
         $username = fullname($user);
-        $username = normalize_username($username);
+        $username = normal_username($username);
         $_SESSION['username'] = $username ;
        
         
@@ -156,6 +142,7 @@ function local_plugin_exibir_url() {
         display_counter($username); //caso queira verificar a atualização
       
         $_SESSION['courseid'] = $_GET['id'];
+       
       
 
     } else {
@@ -170,7 +157,7 @@ function local_plugin_exibir_url() {
             $user = $USER;
     
             $username = fullname($user);
-            $username = normalize_username($username);
+            $username = normal_username($username);
            update_tempo($username , $tempo);
            $userid = $user->id;
            $courseid = $_SESSION['courseid'] ;
@@ -192,7 +179,7 @@ function local_plugin_before_footer() {
     $url = new moodle_url('/local/plugin/pag.php');
     $link = html_writer::link($url, 'Ir para outra página');
     echo $link;}
-    local_plugin_exibir_url();
+    local_plugin();
 }
 
 
