@@ -35,12 +35,15 @@
 ## 💿 Como instalar a plataforma Moodle localmente
 
 ### Download e implementação para windows
-1. acesse o [link](https://download.moodle.org/windows/)
-2. baixe a versão mais atualizada
-3. descompacte o arquivo
-4. execute start moodle.exe
+1. Acesse o [link](https://download.moodle.org/windows/)
+2. Baixe a versão mais atualizada
+3. Descompacte o arquivo
+4. Execute start moodle.exe
 5. Em seu navegador digite na url `localhost`
-6. siga o processo de instalação
+6. Siga o processo de instalação
+
+### Download e implementação para linux
+[Clique aqui e siga os passos](https://github.com/fga-eps-mds/2023.1-Moody/blob/main/ensino/Download%20do%20moodle%20no%20ubuntu)
 
 ### Plugin
 A pasta se encontra no caminho 
