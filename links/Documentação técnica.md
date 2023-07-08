@@ -76,12 +76,14 @@ Cada camada se comunica apenas com as camadas adjacentes por meio de interfaces 
 Dessa forma, ajuda a tornar o sistema escalável, modular e fácil de manter e atualizar.
     
 Camada de Dados:
+
 O MOODY utiliza um banco de dados para armazenar os dados coletados, como notas de 
 avaliações, atividades realizadas, aulas assistidas, informações de alunos e outras 
 informações relevantes.
 É utilizado um banco de dados relacional, o MySQL.
 
 Camada de Backend:
+
 O MOODY tem uma camada de backend responsável pela lógica de negócios 
 e pela interação com o banco de dados.
 Essa camada é desenvolvida utilizando PHP.
@@ -90,12 +92,14 @@ processar as informações, realizar operações no banco de dados e fornecer as
 necessárias.
 
 Camada de Frontend:
+
 O MOODY tem uma camada de frontend que permite aos usuários (professores) 
 interagir com o sistema e visualizar os dados coletados.
 A camada de frontend foi implementada utilizando tecnologias web, como HTML, CSS e 
 JavaScript para facilitar o desenvolvimento da interface do usuário.
 
 Integração com Planilha:
+
 O MOODY tem a capacidade de transferir os dados analisados para uma planilha do Google 
 Sheets ou Excel.
 Para isso, o MOODY utiliza uma integração com a API do Google Sheets e Excel 
