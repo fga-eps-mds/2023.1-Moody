@@ -51,3 +51,26 @@ Em resumo, o MOODY visa resolver o problema de acompanhamento e análise do
 progresso dos alunos em um ambiente virtual de aprendizagem, fornecendo aos 
 professores as ferramentas necessárias para avaliar, monitorar e apoiar 
 individualmente cada aluno em sua turma.
+
+## Design
+
+A escolha inicial do Moody teve com principal inspiração a página do aprender 3,
+onde as tonalidades e esquemas visuais seriam feitos de acordo com a estética da 
+plataforma.Todavia, o grupo teve que reajustar seus processos de escolha de 
+design, uma vez que os planos de funcionalidade e estética do Moody não seriam 
+usados diretamente na plataforma do Aprender 3 e sim para a plataforma Moodle. 
+Desse modo, e seguindo os conselhos da professora e monitores, a equipe de design
+optou por uma abordagem mais minimalista e de fácil interação, o que resultou na 
+simples apresentação de um botão dentro de um folder. Vale ressaltar que as cores 
+escolhidas pela equipe tem como objetivo não destoar da paleta de cores da 
+plataforma, nesse caso branco e azul, além do design de apenas dois botões para 
+ser de fácil acesso. O botão estatísticas que irá levar o usuário para uma 
+planilha e o botão sobre que irá levar o usuário para a página que irá explicar 
+para o usuário como funciona o Moody.
+
+
+
+
+
+
+
