@@ -111,6 +111,19 @@ para exportar os dados coletados e disponibilizá-los em um formato adequado par
 
 [Download para linux](https://github.com/fga-eps-mds/2023.1-Moody/blob/main/ensino/Download%20do%20moodle%20no%20ubuntu)
 
+## APIs
+•API do Moodle: O MOODY sendo um bot desenvolvido para a plataforma Moodle, faz uso da 
+API do Moodle para interagir com a plataforma, realizar a coleta de dados, acessar 
+informações dos alunos e registrar notas, entre outras funcionalidades.
+
+•API do Google Sheets: O MOODY exporta dados para uma planilha Google Sheets e utiliza 
+a API do Google Sheets para realizar essa integração, permitindo a criação e atualização 
+de planilhas diretamente.
+
+•APIs de autenticação: O MOODY faz o uso de APIs de autenticação para gerenciar o 
+acesso e a segurança do sistema, permitindo que os usuários autentiquem-se e acessem 
+as funcionalidades do MOODY.
+
 
 
 
