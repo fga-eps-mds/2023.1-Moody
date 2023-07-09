@@ -110,6 +110,31 @@ caso esse erro continuasse, é necessário entrar em contato com o suporte.
 Essa questão tornou o trabalho do grupo menos dinâmico e afetou o rendimento.
 
 
+## Rhumenigue Barbosa Alves Pinto (Desenvolvedor)
+
+Na etapa inicial do empreendimento, os papéis e tarefas foram alocados entre os membros 
+da equipe, com o acordo de que todos deveriam prestar auxílio mútuo, independentemente de
+estar ou não diretamente vinculados a determinada responsabilidade. Este compromisso foi 
+estabelecido com o intuito de otimizar o desempenho do produto final e garantir o melhor 
+projeto possível. A despeito de eventuais discordâncias e inconsistências em certos aspectos,
+a solidariedade e o senso de a impediram que o projeto saísse dos trilhos.
+A participação ativa neste projeto proporcionou a cada integrante do grupo uma oportunidade 
+de amadurecimento considerável, tanto no que se refere ao domínio de novas tecnologias quanto 
+à administração da equipe. 
+Foi, de longe, a disciplina mais complicada que eu fiz até agora na faculdade, pois, segundo 
+a metodologia da professora, nós ficamos “muito soltos”, ou seja, nós tomamos a “direção” do 
+projeto. É uma metodologia fantástica, pois nos ensina a conduzir um projeto e como decisões 
+erradas nos prejudicam, seja de escolha de tecnologia ou de prazos que achamos ser possível cumprir.
+Os treinamentos da professora e dos monitores foram sempre excelentes e aumentaram muito 
+o nível de conhecimento em TI. Como eu disse acima, foi a matéria mais complexa que eu já 
+fiz, mas com certeza, a que eu aprendi a maior variedade possível de conhecimentos.
+Houve vários momentos de extrema frustração, pois, muitas vezes, o projeto não anda como 
+imaginamos.
+Agradeço à professora e aos monitores por propiciarem essa excelente matéria.
+Por fim, agradeço ao grupo que foi maravilhoso. Obrigado Ian, Christian e Carlos. 
+
+
+
  
 
 
