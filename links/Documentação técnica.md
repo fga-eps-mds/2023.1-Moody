@@ -105,6 +105,13 @@ Sheets ou Excel.
 Para isso, o MOODY utiliza uma integração com a API do Google Sheets e Excel 
 para exportar os dados coletados e disponibilizá-los em um formato adequado para análise posterior.
 
+## Instalação e configuração
+
+[Download para windows](https://download.moodle.org/windows/)
+
+[Download para linux](https://github.com/fga-eps-mds/2023.1-Moody/blob/main/ensino/Download%20do%20moodle%20no%20ubuntu)
+
+
 
 
 
