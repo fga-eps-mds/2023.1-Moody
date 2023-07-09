@@ -171,6 +171,40 @@ function local_plugin() {
     }
 
 }
+function download_trigger() {
+    global $DB;
+    $table = 'local_plugin'; 
+    $filename = 'dados_moodle.csv'; 
+    $sql = "SELECT username, counter, tempo, concluidos FROM {".$table."}";
+
+    // Executar a consulta
+    $result = $DB->get_records_sql($sql);
+
+    // Criar o conteúdo do arquivo CSV
+    $content = "Username,Counter,Tempo,Concluídos\n"; 
+    // Adicionar dados ao CSV
+    foreach ($result as $row) {
+        $content .= $row->username . "," . $row->counter . "," . $row->tempo . "," . $row->concluidos . "\n"; 
+    }
+
+    // Criar um link de download usando JavaScript
+    echo '<a href="javascript:void(0);" onclick="downloadFile(\'' . $filename . '\', \'' . base64_encode($content) . '\')">Download CSV</a>';
+
+    // Função JavaScript para download do arquivo
+    echo '
+    <script>
+        function downloadFile(filename, content) {
+            var element = document.createElement("a");
+            element.setAttribute("href", "data:text/csv;charset=utf-8;base64," + content);
+            element.setAttribute("download", filename);
+            element.style.display = "none";
+            document.body.appendChild(element);
+            element.click();
+            document.body.removeChild(element);
+        }
+    </script>';
+}
+
 //botão de redirecionamento para o moody
 function local_plugin_before_footer() {
     global $PAGE;
@@ -178,8 +212,13 @@ function local_plugin_before_footer() {
      if ($PAGE->pagetype == 'site-index'){
     $url = new moodle_url('/local/plugin/pag.php');
     $link = html_writer::link($url, 'Ir para outra página');
-    echo $link;}
+    echo $link;
+   
+    }
     local_plugin();
+    if ($PAGE->pagetype == 'site-index'){
+    download_trigger();
+}
 }
 
 
