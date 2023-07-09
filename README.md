@@ -10,7 +10,8 @@
 ![image](https://github.com/fga-eps-mds/2023.1-Moody/assets/116928666/8ca1a16e-5b00-4240-a317-da02d10f00d9)
 ![image](https://github.com/fga-eps-mds/2023.1-Moody/assets/116928666/b7c37dfa-d841-440b-b2a1-3de9bc8449da)
 ![image](https://github.com/fga-eps-mds/2023.1-Moody/assets/116928666/64e6204b-e321-4983-b3bf-f40c95f2066c)
-![image](https://github.com/fga-eps-mds/2023.1-Moody/assets/116928666/29684855-1c48-401c-93ef-ef271257fc9a)
+![image](https://github.com/fga-eps-mds/2023.1-Moody/assets/116928666/0ee144ef-ca58-4379-981e-99c51aca8600)
+
 
 ## 📐 Arquitetura
 
@@ -34,12 +35,15 @@
 ## 💿 Como instalar a plataforma Moodle localmente
 
 ### Download e implementação para windows
-1. acesse o [link](https://download.moodle.org/windows/)
-2. baixe a versão mais atualizada
-3. descompacte o arquivo
-4. execute start moodle.exe
+1. Acesse o [link](https://download.moodle.org/windows/)
+2. Baixe a versão mais atualizada
+3. Descompacte o arquivo
+4. Execute start moodle.exe
 5. Em seu navegador digite na url `localhost`
-6. siga o processo de instalação
+6. Siga o processo de instalação
+
+### Download e implementação para linux
+[Clique aqui e siga os passos](https://github.com/fga-eps-mds/2023.1-Moody/blob/main/ensino/Download%20do%20moodle%20no%20ubuntu)
 
 ### Plugin
 A pasta se encontra no caminho 

@@ -1,0 +1,95 @@
+/* retângulo_sobre */
+
+
+position: absolute;
+width: 308px;
+height: 55px;
+
+background: #2930DF;
+border-radius: 10px;
+
+
+/* retangulo_moody */
+
+
+position: absolute;
+width: 170px;
+height: 34px;
+
+background: #2930DF;
+border-radius: 10px;
+
+
+/* Moody */
+
+
+position: absolute;
+width: 40px;
+height: 30px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 15px;
+text-align: center;
+
+color: #FAF0F0;
+
+
+
+/* Retângulo_estatistica */
+
+
+position: absolute;
+width: 107px;
+height: 30px;
+
+background: #FFFCFC;
+border-radius: 10px;
+
+
+/* Retângulo_sobre */
+
+
+position: absolute;
+width: 107px;
+height: 30px;
+
+background: #FFFCFC;
+border-radius: 10px;
+
+
+/* Estatística */
+
+
+position: absolute;
+width: 90px;
+height: 16px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 15px;
+text-align: center;
+
+color: #000000;
+
+
+
+/* Sobre */
+
+
+position: absolute;
+width: 89px;
+height: 16px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 15px;
+text-align: center;
+
+color: #000000;

@@ -1,0 +1,15 @@
+Passos para hospedagem usando a ferramenta FTP
+
+1- Abra o cliente FTP: Inicie o cliente FTP que você instalou em seu computador.
+
+2- Configure a conexão FTP: No cliente FTP, localize a opção de configuração da conexão. Ela pode ser chamada de "Gerenciar sites", "Configurações de conexão" ou algo semelhante, dependendo do cliente FTP. Insira as informações de conexão FTP fornecidas pelo seu provedor de hospedagem, como o endereço do servidor FTP, nome de usuário e senha.
+
+3- Conecte-se ao servidor FTP: Após inserir as informações de conexão, clique no botão "Conectar" ou equivalente no cliente FTP para estabelecer uma conexão com o servidor FTP do seu provedor de hospedagem.
+
+4- Navegue até o diretório de hospedagem: Após a conexão bem-sucedida, você verá dois painéis no cliente FTP. O painel esquerdo geralmente representa os arquivos e pastas do seu computador local, enquanto o painel direito mostra os arquivos e pastas no servidor FTP. Navegue até o diretório onde deseja hospedar seu site no servidor FTP (por exemplo, a pasta "public_html" ou "www").
+
+5- Faça upload dos arquivos: No painel esquerdo, localize os arquivos e pastas do seu site que deseja hospedar. Em seguida, selecione-os e arraste-os para o painel direito para fazer o upload para o servidor FTP. O cliente FTP exibirá o progresso do upload.
+
+6- Verifique a conclusão do upload: Após o upload dos arquivos, verifique se eles foram transferidos com sucesso para o servidor FTP. Você pode fazer isso visualizando a lista de arquivos e pastas no painel direito do cliente FTP.
+
+7-Testando o site: Abra um navegador da web e digite o URL do seu site para verificar se o site está sendo exibido corretamente. Certifique-se de testar diferentes páginas e funcionalidades do site para garantir que tudo esteja funcionando conforme o esperado. 
