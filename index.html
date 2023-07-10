@@ -1,56 +1,210 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<title>Moody</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
-	<header>
-		<h1>Moody</h1>
-		<p>Criado para facilitar!</p>
-	</header>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<main>
-		<section>
-			<h2>Finalidade do Moody</h2>
-			<p>Seu desenvolvimento consiste em um pluguin que ira coletar dados referentes a turma, como notas das avaliações do aluno, número de atividades feitas pelo aluno e a quantidade de aulas assistidas, e salválos dentro de uma planilha.Desse modo, os professores poderão saber de forma rápida como está o desenvolvimento de cada aluno em sua turma.</p>
-		</section>
+        <!--=============== FAVICON ===============-->
+        <link rel="shortcut icon" href="assets/img/robo.png" type="image/x-icon">
 
-		<section>
-			<h2>Integrantes do Projeto</h2>
-			<ul class="integrantes">
-				<li>
-					<img src="https://pps.whatsapp.net/v/t61.24694-24/342970167_281994997587542_6856038002002432639_n.jpg?stp=dst-jpg_s96x96&ccb=11-4&oh=01_AdSJAXo5htjQrb2PzteLr8BTYqRhgAmjMX-LZZ2P7yVH4g&oe=64628C1A" alt="Foto do integrante 1">
-					<p>Carlos Gabriel</p>
-				</li>
-				<li>
-					<img src="https://avatars.githubusercontent.com/u/80042310?v=4" alt="Foto do integrante 2">
-					<p>Christian Hirsch</p>
-				</li>
-				<li>
-					<img src="https://avatars.githubusercontent.com/u/88345985?v=4" alt="Foto do integrante 3">
-					<p>Guilherme Meister Correa</p>
-				</li>
-				<li>
-					<img src="https://pps.whatsapp.net/v/t61.24694-24/70423690_777020989396613_365543326532763648_n.jpg?ccb=11-4&oh=01_AdSWiWkTIAF5Dk0dlFu4iN7FOrkg6llkRVxaWeMyG99Wug&oe=6462714D" alt="Foto do integrante 4">
-					<p>Ian Lucca</p>
-				</li>
-				<li>
-					<img src="https://pps.whatsapp.net/v/t61.24694-24/55995621_382463789016961_5040225893738348544_n.jpg?ccb=11-4&oh=01_AdQknNZbDQXexuvlBgpUocaj2BmYZUJfm2vHEP_-9qXygg&oe=64626ABA" alt="Foto do integrante 5">
-					<p>Rhumenigue Barbosa</p>
-				</li>
-				<li>
-					<img src="https://img.freepik.com/fotos-gratis/tela-vazia-branca_1194-7555.jpg?w=2000" alt="Foto do integrante 6">
-					<p>Rodrigo Gontijo</p>
-				</li>
-			</ul>
-		</section>
-	</main>
+        <!--=============== REMIXICONS ===============-->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 
-	<footer>
-		<p>Moody &copy; 2023</p>
-	</footer>
-</body>
+        <!--=============== CSS ===============-->
+        <link rel="stylesheet" href="assets/css/styles.css">
+
+        <title>MOODY</title>
+    </head>
+    <body>
+        <!--==================== HEADER ====================-->
+        <header class="header" id="header">
+            <nav class="nav container">
+                <a href="#" class="nav__logo">
+                    <img src="assets/img/robo.png" alt="logo image">
+                    MOODY
+                </a>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list grid">
+                        <li class="nav__item">
+                            <a href="#home" class="nav__link">Home</a>
+                        </li>
+
+                        <li class="nav__item">
+                            <a href="#about" class="nav__link">Sobre</a>
+                        </li>
+
+                        <li class="nav__item">
+                            <a href="#popular" class="nav__link">Funcionalidades</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#equipe" class="nav__link">Equipe</a>
+                        </li>
+                    </ul>
+
+                    <!--Close botton-->
+
+                    <div class="nav__close" id="nav-close">
+                        <i class="ri-close-line"></i>
+                    </div>
+
+                </div>
+
+                <div class="nav__buttons">
+                    <!--Theme change button-->
+                    <i class="ri-moon-line change-theme" id="theme-button"></i>
+
+                    <!--Toggle button-->
+                    <div class="nav__toggle" id="nav-toggle">
+                        <i class="ri-menu-5-line"></i>
+                    </div>
+                    
+
+                </div>
+            </nav>
+        </header>
+
+        <!--==================== MAIN ====================-->
+        <main class="main">
+            <!--==================== HOME ====================-->
+            <section class="home section" id="home">
+                <div class="home__container container grid">
+                    <img src="assets/img/tabela.png" alt="home image" class="home__img">
+
+                    <div class="home__data">
+                        <h1 class="home__title">
+                            MOODY
+
+                            <div>
+                                <img src="assets/img/robo.png" alt="home image ">
+                                Plugging
+                            </div>
+                        </h1>
+
+                        <p class="home__description">
+                            Facilitando sua<br>
+                            administração de turmas.
+                        </p>
+
+                        <a href="https://github.com/fga-eps-mds/2023.1-Moody" class="button">
+                            Repositório no GitHub  <i class="ri-github-fill"></i>
+                        </a>
+                    </div>
+                </div>
+
+                
+                
+            </section>
+
+            <!--==================== Sobre ====================-->
+            <section class="about section" id="about">
+                <div class="about__container container grid">
+                    <div class="about__data">
+                        <span class="section__subtitle">Sobre</span>
+                        <h2 class="section__title about__title">                           
+
+                        </h2>
+
+                        <p class="about__description">
+                            O MOODY é um Plugging para a plataforma Moodle, que foi desenvolvido durante a disciplina Métodos de desenvolvimento
+                            de software da FGA, ministrada pela professora Carla Rocha no ano de 2023.<br> <br> 
+                            
+                            Ele foi imaginado com o intuito de facilitar a  vida dos professores, que ao utilizarem
+                            possam receber dados sobre o desempenho dos alunos de suas turmas em uma planilha.<br> <br> 
+                            
+                            O MOODY visa resolver o problema de acompanhamento e análise do progresso dos alunos em um ambiente virtual de aprendizagem, fornecendo aos professores as ferramentas necessárias para avaliar, monitorar e apoiar individualmente cada aluno em sua turma.
+                          
+                        </p>
+                    </div>
+
+                    <img src="assets/img/fsobredef.png" alt="about image" class="about__img">
+                </div>
+                
+            </section>
+
+            <!--==================== POPULAR ====================-->
+            <section class="popular section" id="popular">
+                <span class="section__subtitle">Features</span>
+                <h2 class="section__title">Funcionalidades</h2>
+
+                <div class="popular__container container grid">
+                    <article class="popular__card">
+                        <img src="assets/img/tabelaicon.png" alt="popular image" class="popular__img">
+
+                        <h3 class="popular__name">Acompanhamento</h3>
+                        <br>
+                        <span class="popular__description">
+                            Acesso ao rendimento dos alunos e dados gerais da turma.<br> <br>
+                        
+                        
+                        </span>                        
+                    </article>
+
+                    <article class="popular__card">
+                        <img src="assets/img/download.png" alt="popular image" class="popular__img-1">
+
+                        <h3 class="popular__name">Download</h3>
+                        <br>
+                        <span class="popular__description">
+                            Possibilita o download de arquivo CSV para a visualização dos dados coletados em uma planilha.<br> <br>
+                        
+                        </span>                        
+                    </article>
+
+
+
+                        <article class="popular__card">
+                            <img src="assets/img/docs2.png" alt="popular image" class="popular__img-3">
+    
+                            <h3 class="popular__name">Organização</h3>
+                            <br>
+                            <span class="popular__description">
+                                Dados disponibilizados de forma simples e direta para um melhor feedback.<br> <br>
+                                
+                            
+                            </span>                        
+                        </article>
+                </div>
+                
+            </section>
+
+
+            <!--==================== Equipe ====================-->
+            <section class="equipe section" id="equipe">
+                <div class="equipe__container container grid">
+                    <div class="equipe__data">
+                        <span class="section__subtitle"></span>
+                        <h2 class="section__title equipe__title">                           
+
+                        </h2>
+
+                        
+                    </div>
+
+                    <img src="assets/img/temagrupodef.png" alt="equipe image" class="equipe__img">
+                </div>
+                
+            </section>
+        </main>
+
+        <!--==================== FOOTER ====================-->
+        <footer class="footer">
+            <div class="footer__container container grid">           
+            
+                <span class="footer__copy">
+                    &#169; Squad 3. All rights reserved
+                </span>
+                
+            </div>
+        
+            
+        </footer>       
+
+
+        <!--=============== SCROLLREVEAL ===============-->
+        <script src=""></script>
+
+        <!--=============== MAIN JS ===============-->
+        <script src="assets/js/main.js"></script>
+    </body>
 </html>
