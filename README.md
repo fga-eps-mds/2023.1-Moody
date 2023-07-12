@@ -2,7 +2,7 @@
 
 ## MOODY é um bot criado para a plataforma Moodle, em especial para a plataforma da Unb conhecida como Aprender 3, que tem como objetivo auxiliar os professores com suas turmas. 
 
-### Seu desenvolvimento consiste em um pluguin que ira coletar dados referentes a turma, como notas das avaliações do aluno, número de atividades feitas pelo aluno e a quantidade de aulas assistidas, e salválos dentro de uma planilha.Desse modo, os professores poderão saber de forma rápida como está o desenvolvimento de cada aluno em sua turma.
+### Seu desenvolvimento consiste em um plugin que ira coletar dados referentes a turma, como notas das avaliações do aluno, número de atividades feitas pelo aluno e a quantidade de aulas assistidas, e salválos dentro de uma planilha.Desse modo, os professores poderão saber de forma rápida como está o desenvolvimento de cada aluno em sua turma.
 
 ## 🔨 Tecnologias
 ![image](https://github.com/fga-eps-mds/2023.1-Moody/assets/116928666/50a29fb1-9995-4a18-9843-ace04c3bec25)
