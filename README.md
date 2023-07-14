@@ -62,8 +62,8 @@ Para desenvolvimento do Moody levando em conta a complexidade do projeto e sua e
 
 ## 🤝 Colaboradores
 
-| [<img src="https://github.com/IanLucca12.png" width=80><br><sub>Ian Lucca Soares Mesquita</sub>](https://github.com/IanLucca12) |  [<img src="https://github.com/rhumenigue.png" width=80><br><sub>Rhumenigue Barbosa</sub>](https://github.com/rhumenigue) |  [<img src="https://github.com/crstyhs.png" width=80><br><sub>Christian Hirsch Santos</sub>](https://github.com/crstyhs) |[<img src="https://github.com/gmeister18.png" width=80><br><sub>Guilherme Meister Correa </sub>](https://github.com/gmeister18) |  [<img src="https://github.com/TheCarlosRamos.png" width=80><br><sub>Carlos Gabriel Cardoso Ramos</sub>](https://github.com/TheCarlosRamos) |  [<img src="https://github.com/rodrigogontijoo.png" width=80><br><sub>Rodrigo Braz Ferreira Gontijo</sub>](https://github.com/rodrigogontijoo) | [<img src="https://github.com/RochaCarla.png" width=80><br><sub>Professora Carla Rocha</sub>](https://github.com/RochaCarla)|
-| :---: | :---: | :---: |  :---: | :---: | :---: |  :---: |
+| [<img src="https://github.com/IanLucca12.png" width=80><br><sub>Ian Lucca Soares Mesquita</sub>](https://github.com/IanLucca12) |  [<img src="https://github.com/rhumenigue.png" width=80><br><sub>Rhumenigue Barbosa</sub>](https://github.com/rhumenigue) |  [<img src="https://github.com/crstyhs.png" width=80><br><sub>Christian Hirsch Santos</sub>](https://github.com/crstyhs) |[<img src="https://github.com/gmeister18.png" width=80><br><sub>Guilherme Meister Correa </sub>](https://github.com/gmeister18) |  [<img src="https://github.com/TheCarlosRamos.png" width=80><br><sub>Carlos Gabriel Cardoso Ramos</sub>](https://github.com/TheCarlosRamos) |  
+| :---: | :---: | :---: |  :---: | :---: |
 
 ## 🔎 Licença 👀
 
