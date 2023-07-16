@@ -133,6 +133,21 @@ imaginamos.
 Agradeço à professora e aos monitores por propiciarem essa excelente matéria.
 Por fim, agradeço ao grupo que foi maravilhoso. Obrigado Ian, Christian e Carlos. 
 
+## Guilherme Meister Correa (Desenvolvedor)
+
+Eu considero a disciplina de Métodos de Desenvolvimento de Software como uma das mais importantes 
+até o momento em meu curso. Durante o seu desenvolvimento, pude adquirir um conhecimento significativo 
+em diversas áreas, como metodologias ágeis, como Scrum, e o uso do Git. Esses aprendizados têm sido 
+extremamente valiosos para o meu crescimento profissional e inserção no mercado de trabalho.
+Uma das características que mais apreciei nesta disciplina foi a abordagem prática que adotamos. 
+Fomos incentivados a trabalhar em equipe, simulando um ambiente real de desenvolvimento, com prazos 
+e entregas para os clientes, representados pela professora e monitores. Isso permitiu uma imersão 
+completa e uma compreensão mais profunda dos desafios e responsabilidades de um desenvolvedor.
+Apesar de enfrentar alguns problemas de saúde durante o semestre, os quais ainda persistem, fiz o 
+meu melhor para me dedicar à disciplina. Mesmo diante das adversidades, consegui cumprir com as 
+minhas responsabilidades no projeto e sempre busquei apoiar o meu grupo.
+
+
 
 
  
