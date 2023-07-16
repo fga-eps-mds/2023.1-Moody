@@ -1,0 +1,47 @@
+<?php
+use PHPUnit\Framework\TestCase;
+
+class UserTest extends TestCase
+{
+    public function emailProvider()
+    {
+        return [
+            ['teste@gmail.com', true],
+            ['teste@outlook.com', true],
+            ['teste@yahoo.com', false],
+            ['testegmail.com', false],
+            ['teste@', false],
+            ['teste@outlookcom', false],
+            ['testeoutlook.com', false],
+            ['', false],
+        ];
+    }
+
+    /**
+     * @dataProvider emailProvider
+     */
+    public function testValidEmail($email, $expected)
+    {
+        $result = $this->validateEmail($email);
+        $this->assertEquals($expected, $result);
+    }
+
+    private function validateEmail($email)
+    {
+        // Definir os domínios de email permitidos
+        $allowed_domains = ['gmail.com', 'outlook.com'];
+
+        // Verificar se o email é válido
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            return false;
+        }
+
+        // Verificar se o domínio do email está na lista de permitidos
+        $domain = substr(strrchr($email, "@"), 1);
+        if (!in_array($domain, $allowed_domains)) {
+            return false;
+        }
+
+        return true;
+    }
+}
