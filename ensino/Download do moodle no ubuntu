@@ -1,16 +1,19 @@
+Execute essas linhas de comando no terminal do linux passo a passo:
+
+
 sudo apt-get update
 sudo apt-get install unzip
 
-Apache:
+//Apache:
 
 sudo apt-get install apache2 mysql-client mysql-server php7.0 libapache2-mod-php7.0
 
-Pressione sim/ yes [s/y]
-Digite a senha do seu banco de dados mysql
+//Pressione sim/ yes [s/y]
+//Digite a senha do seu banco de dados mysql
 
 sudo apt-get install graphviz aspell php7.0-curl-gd php7.0-int php7.0-mysql php7.0-mxl php7.0-xmlrpc php7.0-ldap php7.0-zip
 
-Pressione sim/ yes [s/y]
+//Pressione sim/ yes [s/y]
 
 sudo service apache2 start
 cd /var/www/html/
@@ -20,22 +23,22 @@ sudo chmod 777 moodle
 cd moodle
 vi phpconfig.php
 
-No editor de texto, crie um arquivo:
+//No editor de texto, crie um arquivo:
 <?php
 echo phpinfo():
 ?>
 
-Entre no modo de comando e digite :wq no arquivo para salvar e sair
+//Entre no modo de comando e digite :wq no arquivo para salvar e sair
 
 ifconfig
-Copie o endereço Direc. inet e cole no navegador. Acrescente /moodle
-Volte ao terminal...
+//Copie o endereço Direc. inet e cole no navegador. Acrescente /moodle
+//Volte ao terminal...
 
 links www.moodle.org
-Aperte em aceitar
+//Aperte em aceitar
 Downloads->Moodle 3.4+
 Download zip
-Click here to download manually
+//Click here to download manually
 
 ls
 unzip (o que estiver escrito após ls)
@@ -52,19 +55,19 @@ sudo chmod -R 777 /var/www/html/moodlwdata/
 sudo chown -R www-data /var/www/moodledata/
 sudo chown -R www-data /var/www/html/moodledata/
 
-Copie o endereço Direc. inet e cole no navegador. Acrescente /moodle
-Vai iniciar a instalação mas caso der erro, volte ao terminal:
+//Copie o endereço Direc. inet e cole no navegador. Acrescente /moodle
+//Vai iniciar a instalação mas caso der erro, volte ao terminal:
 sudo service apache2 restart 
 
-Complete a instalaççao no navegador
+//Complete a instalaççao no navegador
 
-Volte ao terminal
+//Volte ao terminal
 
 sudo apt-get install php7.0-mbstring
 sudo apt-get install php7.0-soap
 sudo service apache2 restart 
 
-Moodle instalado!
+//Moodle instalado!
 
 
 
