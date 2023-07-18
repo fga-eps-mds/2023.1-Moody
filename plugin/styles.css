@@ -1,25 +1,4 @@
 
-.titulo{
-  margin-bottom: 30px;
-  color: aqua;
-}
-.ancora_1{
-    text-decoration: none;
-    font-family: sans-serif;
-    font-size: 16px;
-    color: #000;
-    border: 1px solid #000;
-    border-radius: 5px;
-    padding: 10px;
-    background-color: #A5C0DD;
-}
-.ancora_1:hover{
-  border: 2px solid #9BA4B5;
-  color: #212A3E ; 
-}
-.texto{
-  margin-top: 30px;
-}
 .baixa{
   text-decoration: none;
     font-family: sans-serif;
@@ -101,4 +80,7 @@
     color: #000000;
     margin: 0;
     padding: 0;
+  }
+  .retangulo_estatistica:hover, .retangulo_sobre2:hover{
+    background-color: #9BA4B5;
   }
