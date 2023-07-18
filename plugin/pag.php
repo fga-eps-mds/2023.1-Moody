@@ -7,8 +7,9 @@ $PAGE->set_title(title : 'estatisticas');
 $context = context_system::instance();
 echo $OUTPUT->header();
 $templatecontext = (object)[
-    'texttodisplay' => 'Acesse o botão acima para verificar as estatísticas',
+    'texttodisplay' => 'Utilize Estatísticas para baixar as informaçoes e Sobre para saber mais sobre o moody',
 ];
+
 echo $OUTPUT->render_from_template('local_plugin/page', $templatecontext);
 echo $OUTPUT->footer();
 
