@@ -31,7 +31,7 @@ font-family: 'Inter';
 font-style: normal;
 font-weight: 400;
 font-size: 12px;
-line-height: 15px;
+line-height: 16px;
 text-align: center;
 
 color: #FAF0F0;
