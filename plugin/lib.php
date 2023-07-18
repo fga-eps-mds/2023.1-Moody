@@ -74,7 +74,7 @@ function contarAtividadesConcluidas($professor, $turma, $userid, $courseid) {
     $resultados = $DB->get_record_sql($sql, $params);
 
 
-    echo "quantidade concluida" .  $resultados->count;
+    //echo "quantidade concluida" .  $resultados->count;
 
         $user = $USER;
         $username = fullname($user);
@@ -91,7 +91,7 @@ function contarAtividadesConcluidas($professor, $turma, $userid, $courseid) {
 
     // Obter o número de atividades do curso
     $contadorAtividade = $DB->count_records('course_modules', array('course' => $courseid));
-    echo "quantidade total de atividades é " .  $contadorAtividade;
+    //echo "quantidade total de atividades é " .  $contadorAtividade;
 }
 
 function normal_username($username) {
@@ -202,14 +202,14 @@ function local_plugin() {
     }
 
 }
-function download_trigger() {
+function download_trigger($professor) {
     global $DB;
     $table = 'local_plugin';
     $filename = 'dados_moodle.csv';
-    $sql = "SELECT id, professor, turma, username, counter, tempo, concluidos FROM {" . $table . "}";
+    $sql = "SELECT id, professor, turma, username, counter, tempo, concluidos FROM {" . $table . "} WHERE professor = :professor";
 
-    // Executar a consulta
-    $result = $DB->get_records_sql($sql);
+    // Executar a consulta com o parâmetro do professor
+    $result = $DB->get_records_sql($sql, ['professor' => $professor]);
 
     // Criar o conteúdo do arquivo CSV
     $content = "ID,Professor,Turma,Username,Counter,Tempo,Concluídos\n";
@@ -219,32 +219,35 @@ function download_trigger() {
     }
 
     // Criar um link de download usando JavaScript
-    echo '<a class = "baixa" href="javascript:void(0);" onclick="downloadFile(\'' . $filename . '\', \'' . base64_encode($content) . '\')">Download CSV</a>';
-
-    // Função JavaScript para download do arquivo
     echo '
     <script>
-        function downloadFile(filename, content) {
-            var element = document.createElement("a");
-            element.setAttribute("href", "data:text/csv;charset=utf-8;base64," + content);
-            element.setAttribute("download", filename);
-            element.style.display = "none";
-            document.body.appendChild(element);
-            element.click();
-            document.body.removeChild(element);
-        }
+        document.addEventListener("DOMContentLoaded", function() {
+            var estatisticaAnchor = document.querySelector("a.Estatistica");
+
+            estatisticaAnchor.addEventListener("click", function(event) {
+                event.preventDefault();
+                var element = document.createElement("a");
+                element.setAttribute("href", "data:text/csv;charset=utf-8;base64,' . base64_encode($content) . '");
+                element.setAttribute("download", "' . $filename . '");
+                element.style.display = "none";
+                document.body.appendChild(element);
+                element.click();
+                document.body.removeChild(element);
+            });
+        });
     </script>';
 }
 
 
-//botão de redirecionamento para o moody
+
+
 function local_plugin_before_footer() {
     global $PAGE, $USER;
 
-    
+    //botão de redirecionamento para o moody
      if ($PAGE->pagetype == 'site-index'){
     $url = new moodle_url('/local/plugin/pag.php');
-    $link = html_writer::link($url, 'Ir para outra página');
+    $link = html_writer::link($url, 'Moody');
     echo $link;
     
 
@@ -256,8 +259,12 @@ function local_plugin_before_footer() {
     $path = $parsed_url['path'];
     $context = context_user::instance($USER->id);
     if ( $path ==='/local/plugin/pag.php' && has_capability('moodle/course:update', $context)){
+            $user = $USER;
     
-    download_trigger();
+            $username = fullname($user);
+            $username = normal_username($username);
+    
+    download_trigger($username);
 }
 }
 
